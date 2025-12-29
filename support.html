@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <title>Me Palette — Support</title>
+  <meta name="description" content="Me Palette support page" />
+  <style>
+    :root{
+      --bg:#0b0c10; --card:#12141b; --text:#e9edf3; --muted:#a8b0bf;
+      --line:rgba(255,255,255,.10); --accent:#8aa6ff;
+    }
+    @media (prefers-color-scheme: light){
+      :root{ --bg:#ffffff; --card:#f6f7fb; --text:#0f172a; --muted:#55627a; --line:rgba(2,6,23,.12); --accent:#3b82f6; }
+    }
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background:var(--bg); color:var(--text);
+      line-height:1.6;
+    }
+    a{ color:var(--accent); text-decoration:none; }
+    a:hover{ text-decoration:underline; }
+    .wrap{ max-width:760px; margin:0 auto; padding:28px 18px 56px; }
+    h1{ font-size:28px; margin:0 0 6px; letter-spacing:-.02em; }
+    .sub{ color:var(--muted); font-size:14px; }
+    .card{
+      margin-top:16px;
+      background:var(--card); border:1px solid var(--line);
+      border-radius:14px; padding:16px;
+    }
+    .card h2{ font-size:16px; margin:0 0 10px; }
+    .card p, .card li{ font-size:14px; }
+    ul{ margin:10px 0 0 18px; padding:0; }
+    code{
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      font-size:12px; padding:2px 6px; border-radius:8px;
+      background:rgba(127,127,127,.18); border:1px solid var(--line);
+    }
+    .btn{
+      display:inline-block; margin-top:10px; padding:10px 12px; border-radius:12px;
+      border:1px solid var(--line); background:transparent; color:var(--text);
+    }
+    .btn:hover{ border-color:rgba(127,127,127,.35); text-decoration:none; }
+    footer{
+      margin-top:16px; padding-top:14px; border-top:1px solid var(--line);
+      color:var(--muted); font-size:12px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Support</h1>
+      <div class="sub">Me Palette</div>
+    </header>
+
+    <section class="card">
+      <h2>Contact</h2>
+      <p>
+        Email:
+        <a href="mailto:simplefun2025@gmail.com?subject=%5Bme-platte%5D%20Support%20Request">simplefun2025@gmail.com</a>
+      </p>
+
+      <a class="btn"
+         href="mailto:simplefun2025@gmail.com?subject=%5Bme-platte%5D%20Support%20Request&body=Please%20describe%20your%20issue%20below.%0A%0A-%20Device%3A%0A-%20iOS%20version%3A%0A-%20App%20version%3A%0A-%20Steps%20to%20reproduce%3A%0A">
+        Email Support
+      </a>
+
+      <p style="margin-top:10px;color:var(--muted);">
+        Tip: Include <code>Device</code>, <code>iOS version</code>, <code>App version</code>, and reproduction steps.
+      </p>
+    </section>
+
+    <footer>
+      © <span id="y"></span> Simplefun2025
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
